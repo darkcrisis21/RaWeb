@@ -1,22 +1,28 @@
 //Pagina Principal Del Proyecto
-<html>
+html>
   <head>
-    <title>CFE Webrtc</title>
+    <title>CFE_RTC</title>
     <link type="text/css" href="style.css" rel="stylesheet"></link>
+
+    <script src="webrtc.io.js"></script>
+
   </head>
   <body onload="init()">
     <div id="videos">
-      <video id="you" autoplay controls></video>
+      <video id="you" autoplay width="263" height="200" style="position: absolute; left: 0px; bottom: 0px;" muted="true" border="5">
+        <video id="tu" autoplay width="263" height="200" style="position: absolute; left: 0px; bottom: 0px;" border="5" muted="true">
     </div>
-    <div id="chatbox">
-      <button id="fullscreen">Pantalla Completa</button>
-      <button id="newRoom">Crear Nueva Sala</button>
-      <div id="messages">
-      </div>
-      <br>
-      <input id="chatinput" type="text" placeholder="Escribe Tu Mensaje Aqui.. (Presiona Enter para enviar)"/>
+
+    
+
+    <div class="buttonBox">
+      <div id="fullscreen" class="button">Pantalla Completa</div>
+      <div id="newRoom" class="button">Crear Nueva Sala</div>
+      <div id="muteMicro" class="button">Mutear Microfono</div>
     </div>
-    <script src="webrtc.io.js"></script>
-    <script src="client.js"></script>
+
+    <script src="script.js"></script>
+
   </body>
+
 </html>
